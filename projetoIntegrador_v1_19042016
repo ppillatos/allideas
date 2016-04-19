@@ -1,0 +1,93 @@
+//Programa	: Projeto Integrador I
+//Data		: 19-04-2016
+//Versão	: v1
+//Autor		: Poncio Costa
+public static void main (String[] Args){
+	//variables
+	int menu, submenu, idade, celular;
+	String diaristas, diarias, nome, descricaoOferta, localOferta;
+	Scanner teclado = new Scanner(System.in);
+	//INICIO
+	do{
+		System.out.println("SERVIÇOS DOMICILIARES: ");
+		System.out.println("[1] - Para Cadastrar \n");
+		System.out.println("[2] - Para Relatórios \n");
+		System.out.println("[3] - Sobre \n");
+		System.out.println("[0] - Sair\n");
+		menu = teclado.next();
+	}while(menu != 0){//MENU
+		switch (menu) {
+			case = 1{ //Cadastro
+				while(submenu <> 1 && submenu <> 2){//SUBMENU
+				System.out.println("SERVIÇOS DOMICILIARES >> CADASTRO: ");
+				System.out.println("[1] - Diaristas \n");
+				System.out.println("[2] - Diárias \n");
+				submenu = teclado.next();
+				switch (submenu) {
+					case = 1{ //Cadastro das diaristas
+						System.out.println("SERVIÇOS DOMICILIARES >> CADASTRO >> DIARISTAS: ");
+						System.out.println("Insira o nome: ");
+						nome = teclado.next();
+						System.out.println("Insira a idade: ");
+						idade = teclado.nextint();
+						System.out.println("Insira o numero do celular(sem ifem): ");
+						celular = teclado.nextint();
+						break;
+					}
+					case = 2{ //Cadastro das ofertas de diarias
+						System.out.println("SERVIÇOS DOMICILIARES >> CADASTRO >> OFERTAS DE DIÁRIAS: ");
+						System.out.println("Insira a oferta: ");
+						descricaoOferta = teclado.next();
+						System.out.println("Insira o local: ");
+						localOferta = teclado.nextint();
+						break;
+					}
+					default{
+						System.out.println("ERRO! Opção inválida.");
+						break;
+					}
+				}
+				}//FIM SUBMENU CADASTRO
+				break;
+			}
+			case = 2{ //Relatorios
+				while(submenu <> 1 && submenu <> 2){//SUBMENU
+				System.out.println("SERVIÇOS DOMICILIARES >> RELATORIOS: ");
+				System.out.println("[1] - Diarístas \n");
+				System.out.println("[2] - Oferta de Diárias \n");
+				submenu = teclado.next();
+				switch (submenu) {
+					case = 1{ //Relatorio das diaristas
+						System.out.println("SERVIÇOS DOMICILIARES >> RELATORIO >> DIARISTAS: ");
+						System.out.println(nome);
+						System.out.println(idade);
+						System.out.println(celular);
+						break;
+					}
+					case = 2{ //Cadastro das ofertas de diarias
+						System.out.println(descricaoOferta);
+						System.out.println(localOferta);
+						break;
+					}
+					default{
+						System.out.println("ERRO! Opção inválida.");
+						break;
+					}
+				}
+				}//FIM SUBMENU RELATORIOS
+				break;
+			}
+			case = 3{ //Sobre
+				System.out.println("Programa que auxilia na contratação de serviços domiciliares, como limpeza, pintura, etc.");
+				break;
+			}
+			default{
+				System.out.println("ERRO! Opção inválida.");
+			}
+		}
+	}//FIM MENU
+	//FINALIZANDO SISTEMA
+	if(menu==0){
+		System.out.println("Programa 'Finalizado'...");
+	}
+}//FIM
